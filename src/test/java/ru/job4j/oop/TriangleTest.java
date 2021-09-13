@@ -14,4 +14,13 @@ public class TriangleTest extends TestCase {
         double rsl = triangle.area();
         assertThat(rsl, closeTo(8, 0.001));
     }
+
+    public void testAreaImpossible() {
+        Point a = new Point(3, 7);
+        Point b = new Point(11, 34);
+        Point c = new Point(11, 34);
+        Triangle triangle = new Triangle(a, b, c);
+        double rsl = triangle.area();
+        assertThat(rsl, closeTo(-1, 0));
+    }
 }
