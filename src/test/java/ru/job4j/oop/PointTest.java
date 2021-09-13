@@ -28,4 +28,28 @@ public class PointTest extends TestCase {
         double expected = 28.16;
         Assert.assertEquals(expected, result, 2);
     }
+
+    public void testDistance3d() {
+        Point a = new Point(0, 0, 0);
+        Point b = new Point(2, 0, 0);
+        double result = a.distance3d(b);
+        double expected = 2.0;
+        Assert.assertEquals(expected, result, 2);
+    }
+
+    public void testDistance3dMore() {
+        Point a = new Point(0, 4, 0);
+        Point b = new Point(2, 0, 7);
+        double result = a.distance3d(b);
+        double expected = 8.3;
+        Assert.assertEquals(expected, result, 0.01);
+    }
+
+    public void testDistance3dEvenMore() {
+        Point a = new Point(3, 10, 15);
+        Point b = new Point(2, 5, 7);
+        double result = a.distance3d(b);
+        double expected = 9.4868;
+        Assert.assertEquals(expected, result, 0.0001);
+    }
 }
