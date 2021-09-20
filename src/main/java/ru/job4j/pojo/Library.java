@@ -11,22 +11,19 @@ public class Library {
         books[1] = houndBaskervilles;
         books[2] = robinsonCrusoe;
         books[3] = alice;
-        for (int i = 0; i < books.length; i++) {
-            Book bks = books[i];
+        for (Book bks : books) {
             System.out.println(bks.getName() + " - " + bks.getPages());
         }
         System.out.println("\nChanges first book on fourth book");
         Book tmp = books[0];
         books[0] = books[3];
         books[3] = tmp;
-        for (int i = 0; i < books.length; i++) {
-            Book bks = books[i];
+        for (Book bks : books) {
             System.out.println(bks.getName() + " - " + bks.getPages());
         }
         System.out.println("\nPrint book info if book name \"Clean code\"");
-        for (int i = 0; i < books.length; i++) {
-            Book bks = books[i];
-            if (bks.getName().equals("Clean code")) {
+        for (Book bks : books) {
+            if ("Clean code".equals(bks.getName())) {
                 System.out.println(bks.getName() + " - " + bks.getPages());
             }
         }
