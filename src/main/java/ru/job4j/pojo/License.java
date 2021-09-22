@@ -53,12 +53,12 @@ public class License {
         return Objects.equals(owner, license.owner)
                 && Objects.equals(model, license.model)
                 && Objects.equals(code, license.code)
-                /*&& Objects.equals(created, license.created)*/;
+                && Objects.equals(created, license.created);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(owner, model, code/*, created*/);
+        return Objects.hash(owner, model, code, created);
     }
 
     @Override
