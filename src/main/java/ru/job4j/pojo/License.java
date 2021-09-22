@@ -60,4 +60,13 @@ public class License {
     public int hashCode() {
         return Objects.hash(owner, model, code, created);
     }
+
+    @Override
+    public String toString() {
+        return "License{" + "owner='" + owner + '\''
+                + ", model='" + model + '\''
+                + ", code='" + code + '\''
+                + ", created=" + created
+                + '}';
+    }
 }
