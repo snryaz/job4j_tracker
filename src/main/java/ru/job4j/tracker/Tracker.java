@@ -32,7 +32,7 @@ public class Tracker {
 
     private int indexOf(int id) {
         int rsl = -1;
-        for (int  i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             if (items[i].getId() == id) {
                 rsl = i;
                 break;
@@ -54,5 +54,16 @@ public class Tracker {
             return true;
         }
         return false;
+    }
+
+    public boolean delete(int id) {
+        int index = indexOf(id);
+        int start = index + 1;
+        int distPos = index;
+        int length = size - index - 1;
+        System.arraycopy(items, start, items, distPos, length);
+        items[size - 1] = null;
+        size--;
+        return true;
     }
 }
