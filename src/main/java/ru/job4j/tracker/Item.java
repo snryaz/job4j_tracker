@@ -43,7 +43,6 @@ public class Item {
         return created;
     }
 
-    @SuppressWarnings("checkstyle:OperatorWrap")
     @Override
     public String toString() {
         return "Item{"
