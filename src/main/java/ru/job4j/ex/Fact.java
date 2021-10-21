@@ -7,7 +7,7 @@ public class Fact {
 
     public int calc(int n) {
         if (n < 0) {
-            throw new IllegalArgumentException("The number must be positive");
+            throw new IllegalArgumentException("The number must be greater than zero");
         }
         int rsl = 1;
         for (int i = 1; i <= n; i++) {
