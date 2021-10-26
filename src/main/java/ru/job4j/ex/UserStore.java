@@ -5,7 +5,7 @@ public class UserStore {
     public static User findUser(User[] users, String login) throws UserNotFoundException {
         User rsl = null;
         for (User user : users) {
-            if (login.equals(user.getUsername())) {
+            if (login.equals(user.getUserName())) {
                 rsl = user;
                 break;
             }
@@ -20,7 +20,7 @@ public class UserStore {
         boolean rsl = user.isValid();
         if (!rsl) {
             throw new UserInvalidException("Access denied");
-        } else if (user.getUsername().length() < 3) {
+        } else if (user.getUserName().length() < 3) {
             throw new UserInvalidException("UserName must contain more than 2 characters");
         }
         return rsl;
