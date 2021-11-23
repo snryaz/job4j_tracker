@@ -8,11 +8,11 @@ public class Calculator {
     }
 
     public static int minus(int b) {
-        return x - b;
+        return b - x;
     }
 
     public double divide(int c) {
-        return (double) x / c;
+        return (double) c / x;
     }
 
     public double sumAllOperation(int s) {
