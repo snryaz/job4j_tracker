@@ -21,8 +21,9 @@ public class Job implements Comparable<Job> {
     public String
     toString() {
         return "Job{"
-                + "name='" + name + '\''
-                + ", priority=" + priority
+                + name
+                + ", "
+                + priority
                 + '}';
     }
 
